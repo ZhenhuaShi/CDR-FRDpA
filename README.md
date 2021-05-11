@@ -15,12 +15,16 @@ run [demoRP.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoRP.m) to
 
 We also provide a sugfis_mbgd_app.mlapp for simple test. Some examples are given below:
 
+## FCM-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/FCM-RDpA.PNG"/></div>
 
+## CDR-FCM-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-FCM-RDpA.PNG"/></div>
 
+## CDR-GP-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-GP-RDpA.PNG"/></div>
 
+## CDRP-FCM-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDRP-FCM-RDpA.PNG"/></div>
 
 ## Citation
