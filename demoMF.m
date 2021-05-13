@@ -7,9 +7,9 @@ Powerball = 0.5;
 DropRule = 0.5;
 lr = 0.01;
 l2 = 0.05;
-nIt = 1000;
+nIt = 10%00;
 Nbs = 64;
-LN0={'Gaussian','BellShaped','Trapezoidal','Triangular','IT2Gauss','IT2vGauss'};
+LN0={'Triangular','Trapezoidal','BellShaped','Gaussian'};
 LN=cell(1,length(LN0)*length(nRs)+1);
 LN(1)={'RR'};
 for i=1:length(nRs)
@@ -29,9 +29,9 @@ BestmIter=cellfun(@(u)ones(length(datasets),nAlgs),cell(nRepeats,1),'UniformOutp
 thres=cellfun(@(u)inf(length(datasets),nAlgs),cell(nRepeats,1),'UniformOutput',false);
 BestF=cellfun(@(u)nan(length(datasets),nAlgs,max(nRs)),cell(nRepeats,1),'UniformOutput',false);
 for r = 1
-% delete(gcp('nocreate'))
-% parpool(nRepeats);
-% parfor r=1:nRepeats
+    % delete(gcp('nocreate'))
+    % parpool(nRepeats);
+    % parfor r=1:nRepeats
     dataDisp=cell(1,2);    dataDisp{1}=r;
     for s=1:length(datasets)
         dataDisp{2} = s;   send(dqWorker,dataDisp); % Display progress in parfor
@@ -67,21 +67,10 @@ for r = 1
             
             nRule=2^nF;
             
-            %% Gaussian
+            %% Triangular
             tic;
             id=id+1;
-            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF',MF,'DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
-            if min(tmpt{1})<thres{r}(s,id)||~isfinite(thres{r}(s,id))
-                [thres{r}(s,id),BestmIter{r}(s,id)]=min(tmpt{1});
-                BestF{r}(s,id,1:nRule)=fB;
-                [RMSEtrain{r}(s,id,:),RMSEtune{r}(s,id,:),RMSEtest{r}(s,id,:)]=deal(tmp,tmpt{1},tmpt{2});
-            end
-            times{r}(s,id)=toc;
-            
-            %% BellShaped
-            tic;
-            id=id+1;
-            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF','gbell','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
+            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF','tri','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
             if min(tmpt{1})<thres{r}(s,id)||~isfinite(thres{r}(s,id))
                 [thres{r}(s,id),BestmIter{r}(s,id)]=min(tmpt{1});
                 BestF{r}(s,id,1:nRule)=fB;
@@ -100,10 +89,10 @@ for r = 1
             end
             times{r}(s,id)=toc;
             
-            %% Triangular
+            %% BellShaped
             tic;
             id=id+1;
-            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF','tri','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
+            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF','gbell','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
             if min(tmpt{1})<thres{r}(s,id)||~isfinite(thres{r}(s,id))
                 [thres{r}(s,id),BestmIter{r}(s,id)]=min(tmpt{1});
                 BestF{r}(s,id,1:nRule)=fB;
@@ -111,21 +100,10 @@ for r = 1
             end
             times{r}(s,id)=toc;
             
-            %% IT2Gauss
+            %% Gaussian
             tic;
             id=id+1;
-            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF',MF,'Uncertain','mean','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
-            if min(tmpt{1})<thres{r}(s,id)||~isfinite(thres{r}(s,id))
-                [thres{r}(s,id),BestmIter{r}(s,id)]=min(tmpt{1});
-                BestF{r}(s,id,1:nRule)=fB;
-                [RMSEtrain{r}(s,id,:),RMSEtune{r}(s,id,:),RMSEtest{r}(s,id,:)]=deal(tmp,tmpt{1},tmpt{2});
-            end
-            times{r}(s,id)=toc;
-            
-            %% IT2vGauss
-            tic;
-            id=id+1;
-            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF',MF,'Uncertain','var','DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
+            [tmp,tmpt,~, ~, ~, ~, fB]=sugfis_mbgd(XTrain,yTrain,{XTune,XTest},{yTune,yTest},'MF',MF,'DR','CDR','nF',nF,'Init','FCM','nMF',nRule,'Opt','AdaBelief','Powerball',Powerball,'DropRule',DropRule,'lr',lr,'l2',l2,'nIt',nIt,'Nbs',Nbs);
             if min(tmpt{1})<thres{r}(s,id)||~isfinite(thres{r}(s,id))
                 [thres{r}(s,id),BestmIter{r}(s,id)]=min(tmpt{1});
                 BestF{r}(s,id,1:nRule)=fB;
@@ -147,7 +125,7 @@ for s=1:length(datasets)
         tmp(s,id,:)=cell2mat(cellfun(@(u,m)squeeze(u(s,id,m(s,id))),RMSEtest,BestmIter,'UniformOutput',false));
     end
 end
-lineStyles={'k','k','g','g','b','b','r','r';'-','--','-','--','-','--','-','--'};
+lineStyles={'k','k','b','b','g','g','r','r';'-','--','-','--','-','--','-','--'};
 close all
 figure;
 set(gcf,'DefaulttextFontName','times new roman','DefaultaxesFontName','times new roman','defaultaxesfontsize',12);
