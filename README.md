@@ -41,7 +41,7 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
   journal = {Information Sciences},
   title   = {{FCM-RDpA}: {TSK} Fuzzy Regression Model Construction Using Fuzzy C-Means Clustering, Regularization, {D}rop{R}ule, and {P}owerball {A}da{B}elief},
   year    = {2021},
-  note    = {submitted},
+  note    = {in press},
 }
 @Article{Wu2020,
   author  = {Dongrui Wu and Ye Yuan and Jian Huang and Yihua Tan},
