@@ -13,7 +13,7 @@ run [demoMF.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoMF.m) to
 
 run [demoRP.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoRP.m) to reproduce the results on the Estate-costs dataset of Fig.8 in the paper.
 
-We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/sugfis_mbgd_app.mlapp) for simple test. Some examples are given below:
+We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/sugfis_mbgd_app.mlapp) for simple test. Some examples are given as below:
 
 ## FCM-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/FCM-RDpA.PNG"/></div>
