@@ -1,7 +1,7 @@
 # CDR-FCM-RDpA
 source code for CDR-FCM-RDpA paper
 
-CDR-FCM-RDpA enhances the FCM-RDpA (Fuzzy C-Means Clustering, Regularization, DropRule, and Powerball AdaBelief; [paper](https://arxiv.org/abs/2012.00060)|[code](https://github.com/ZhenhuaShi/FCM-RDpA)|[blog](http://blog.sciencenet.cn/blog-3418535-1260629.html)) via consistent dimensionality reduction to optimize TSK fuzzy systems for regression in high dimensionality
+CDR-FCM-RDpA enhances the FCM-RDpA (Fuzzy C-Means Clustering, Regularization, DropRule, and Powerball AdaBelief; [paper](https://authors.elsevier.com/c/1dHuD4ZQE4EJG)|[arxiv](https://arxiv.org/abs/2012.00060)|[code](https://github.com/ZhenhuaShi/FCM-RDpA)|[blog](http://blog.sciencenet.cn/blog-3418535-1260629.html)) via consistent dimensionality reduction to optimize TSK fuzzy systems for regression in high dimensionality
 
 run [demoCDR.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoCDR.m) to reproduce the results on the Estate-costs dataset of Fig.2/3 in the paper.
 
@@ -41,7 +41,8 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
   journal = {Information Sciences},
   title   = {{FCM-RDpA}: {TSK} Fuzzy Regression Model Construction Using Fuzzy C-Means Clustering, Regularization, {D}rop{R}ule, and {P}owerball {A}da{B}elief},
   year    = {2021},
-  note    = {in press},
+  pages   = {490-504},
+  volume  = {574},
 }
 @Article{Wu2020,
   author  = {Dongrui Wu and Ye Yuan and Jian Huang and Yihua Tan},
