@@ -32,7 +32,7 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
 @Article{Shi2021a,
   author  = {Zhenhua Shi and Dongrui Wu and Changming Zhao},
   journal = {IEEE Trans. on Fuzzy Systems},
-  title   = {Optimize {TSK} Fuzzy Systems for Regression in High Dimensionality via Integrating Consistent Dimensionality Reduction and {FCM-RDpA} ({CDR-FCM-RDpA})},
+  title   = {{TSK} Fuzzy System Optimization for High-Dimensional Regression Problems},
   year    = {2021},
   note    = {submitted},
 }
