@@ -31,7 +31,7 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
 ```
 @Article{Shi2021a,
   author  = {Zhenhua Shi and Dongrui Wu and Changming Zhao},
-  journal = {IEEE Trans. on Fuzzy Systems},
+  journal = {Information Sciences},
   title   = {{TSK} Fuzzy System Optimization for High-Dimensional Regression Problems},
   year    = {2021},
   note    = {submitted},
