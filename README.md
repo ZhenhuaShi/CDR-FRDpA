@@ -30,9 +30,9 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
 ## Citation
 ```
 @Article{Shi2021a,
-  author  = {Zhenhua Shi and Dongrui Wu and Changming Zhao},
-  journal = {Information Sciences},
-  title   = {{TSK} Fuzzy System Optimization for High-Dimensional Regression Problems},
+  author  = {石振华 and 伍冬睿 and 赵昶铭},
+  journal = {自动化学报},
+  title   = {一种适用于高维输入TSK回归模糊系统的优化方法},
   year    = {2021},
   note    = {submitted},
 }
