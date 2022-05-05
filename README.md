@@ -1,7 +1,7 @@
-# CDR-FCM-RDpA
-source code for CDR-FCM-RDpA paper
+# CDR-FRDpA
+source code for CDR-FRDpA paper
 
-CDR-FCM-RDpA enhances the FCM-RDpA (Fuzzy C-Means Clustering, Regularization, DropRule, and Powerball AdaBelief; [paper](https://authors.elsevier.com/c/1dHuD4ZQE4EJG)|[arxiv](https://arxiv.org/abs/2012.00060)|[code](https://github.com/ZhenhuaShi/FCM-RDpA)|[blog](http://blog.sciencenet.cn/blog-3418535-1260629.html)) via consistent dimensionality reduction to optimize TSK fuzzy systems for regression in high dimensionality
+CDR-FRDpA enhances the FCM-RDpA (Fuzzy C-Means Clustering, Regularization, DropRule, and Powerball AdaBelief; [paper](https://authors.elsevier.com/c/1dHuD4ZQE4EJG)|[arxiv](https://arxiv.org/abs/2012.00060)|[code](https://github.com/ZhenhuaShi/FCM-RDpA)|[blog](http://blog.sciencenet.cn/blog-3418535-1260629.html)) via consistent dimensionality reduction to optimize TSK fuzzy systems for regression in high dimensionality
 
 run [demoCDR.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoCDR.m) to reproduce the results on the Estate-costs dataset of Fig.2/3 in the paper.
 
@@ -18,22 +18,22 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
 ## FCM-RDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/FCM-RDpA.PNG"/></div>
 
-## CDR-FCM-RDpA
+## CDR-FRDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-FCM-RDpA.PNG"/></div>
 
-## CDR-GP-RDpA
+## CDR-GRDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-GP-RDpA.PNG"/></div>
 
-## CDRP-FCM-RDpA
+## CDRP-FRDpA
 <div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDRP-FCM-RDpA.PNG"/></div>
 
 ## Citation
 ```
 @Article{Shi2021a,
-  author  = {石振华 and 伍冬睿 and 赵昶铭},
-  journal = {自动化学报},
-  title   = {一种适用于高维输入TSK回归模糊系统的优化方法},
-  year    = {2021},
+  author  = {Zhenhua Shi and Changming Zhao and Dongrui Wu},
+  journal = {Engineering Applications of Artificial Intelligence},
+  title   = {Linear Dimensionality Reduction of TSK Fuzzy Systems in High-Dimensional Regression Tasks},
+  year    = {2022},
   note    = {submitted},
 }
 @Article{Shi2021,
