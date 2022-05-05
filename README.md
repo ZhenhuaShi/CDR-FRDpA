@@ -16,16 +16,16 @@ run [demoRP.m](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/demoRP.m) to
 We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/sugfis_mbgd_app.mlapp) for simple test. Some examples are given as below:
 
 ## FCM-RDpA
-<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/FCM-RDpA.PNG"/></div>
+<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FRDpA/blob/main/FCM-RDpA.PNG"/></div>
 
 ## CDR-FRDpA
-<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-FCM-RDpA.PNG"/></div>
+<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FRDpA/blob/main/CDR-FRDpA.PNG"/></div>
 
 ## CDR-GRDpA
-<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDR-GP-RDpA.PNG"/></div>
+<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FRDpA/blob/main/CDR-GRDpA.PNG"/></div>
 
 ## CDRP-FRDpA
-<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FCM-RDpA/blob/main/CDRP-FCM-RDpA.PNG"/></div>
+<div align=center><img src="https://github.com/ZhenhuaShi/CDR-FRDpA/blob/main/CDRP-FRDpA.PNG"/></div>
 
 ## Citation
 ```
