@@ -29,7 +29,7 @@ We also provide a [sugfis_mbgd_app.mlapp](https://github.com/ZhenhuaShi/CDR-FCM-
 
 ## Citation
 ```
-@Article{Shi2021a,
+@Article{Shi2022,
   author  = {Zhenhua Shi and Changming Zhao and Dongrui Wu},
   journal = {Engineering Applications of Artificial Intelligence},
   title   = {Linear Dimensionality Reduction of TSK Fuzzy Systems in High-Dimensional Regression Tasks},
